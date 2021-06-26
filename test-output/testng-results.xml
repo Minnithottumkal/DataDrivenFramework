@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<br>Verification Failure : expected [Invalid login] but found [valid login]<br>]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank" href=Sat_Jun_26_17_08_55_IST_2021.jpg><img src=Sat_Jun_26_17_08_55_IST_2021.jpg height=200 width=200></img></a>]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-06-26T11:38:49Z" name="Data Driven Basics" finished-at="2021-06-26T11:38:56Z" duration-ms="7359">
+    <groups>
+    </groups>
+    <test started-at="2021-06-26T11:38:49Z" name="LoginTest" finished-at="2021-06-26T11:38:56Z" duration-ms="7359">
+      <class name="com.simplogics.testcases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.simplogics.testcases.LoginTest@340da44c]" started-at="2021-06-26T17:08:35Z" name="setup" finished-at="2021-06-26T17:08:49Z" duration-ms="13473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest(java.util.Hashtable)[pri:0, instance:com.simplogics.testcases.LoginTest@340da44c]" started-at="2021-06-26T17:08:49Z" name="loginTest" data-provider="dp" finished-at="2021-06-26T17:08:55Z" duration-ms="6499" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Power123, email=admin@simplogics.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Verification Failure : expected [Invalid login] but found [valid login]<br>]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank" href=Sat_Jun_26_17_08_55_IST_2021.jpg><img src=Sat_Jun_26_17_08_55_IST_2021.jpg height=200 width=200></img></a>]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.simplogics.testcases.LoginTest@340da44c]" started-at="2021-06-26T17:08:56Z" name="teardown" finished-at="2021-06-26T17:08:56Z" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.simplogics.testcases.LoginTest -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- Data Driven Basics -->
+</testng-results>
