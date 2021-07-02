@@ -16,13 +16,9 @@ public class LoginTest extends TestBase {
 			throw new SkipException("Skipping the test " + "LoginTest".toUpperCase() + " as the Runmode is NO");
 		}
 		//Below skip used runmode inside the testcase
-		/*
-		 * if(!data.get("runmode").equals("Y")){ throw new
-		* SkipException("Skipping the test " + "loginTest".toUpperCase() +
-		 * "as the Runmode is NO");
-		 * 
-		 * }
-		 */
+	
+
+		 
 
 		type("email_XPATH", data.get("email"));
 		type("password_CSS", data.get("password"));

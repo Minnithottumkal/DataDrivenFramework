@@ -1,5 +1,6 @@
 package com.simplogics.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,27 +13,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.simplogics.listeners.CustomListeners;
 import com.simplogics.utilities.ExcelReader;
-import com.simplogics.utilities.ExtentManager;
 import com.simplogics.utilities.TestUtil;
 
-public class TestBase {
+
+public class TestBase{
 	public static WebDriver driver;
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
+
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExcelReader excel = new ExcelReader(
 			System.getProperty("user.dir") + "/src/test/Files/excel/testdata.xlsx");
-	public ExtentReports rep = ExtentManager.getInstance();
-	public static ExtentTest test;
+	public static String browser;
+
 
 	@BeforeSuite
 	public void setup() {
@@ -67,6 +67,18 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
+				browser= System.getenv("browser");
+				
+			}else {
+				
+				browser=config.getProperty("browser");
+			}
+				
+			
+			config.setProperty("browser", browser);
+			
 			if (config.getProperty("browser").equals("firefox")) {
 
 				System.setProperty("webdriver.gecko.driver",
@@ -106,7 +118,7 @@ public class TestBase {
 		} else if (locator.endsWith("_linkText")) {
 			driver.findElement(By.linkText(OR.getProperty(locator))).click();
 		}
-		test.log(LogStatus.INFO, "Clicking on : " + locator);
+		CustomListeners.test.log(Status.INFO, "Clicking on : " + locator);
 	}
 
 	public void type(String locator, String value) {
@@ -117,28 +129,26 @@ public class TestBase {
 		} else if (locator.endsWith("_ID")) {
 			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
 		}
-		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
+		CustomListeners.test.log(Status.INFO, "Typing in : " + locator + " entered value as " + value);
 	}
 
 	public static void verifyEquals(String expected, String actual) throws IOException {
 		try {
 			Assert.assertEquals(actual, expected);
 		} catch (Throwable t) {
-			System.setProperty("org.uncommons.reportng.escape-output", "false");
-			TestUtil.captureScreenshot();
-			Reporter.log("<br>"+"Verification Failure : " +t.getMessage()+"<br>");
-			Reporter.log("<a target=\"_blank\" href="+TestUtil.screenshotName+"><img src="+TestUtil.screenshotName+" height=200 width=200></img></a>");
-			Reporter.log("<br>");
-			test.log(LogStatus.FAIL,"Verification Failed with exception : "+t.getMessage());
-			test.log(LogStatus.FAIL, test.addScreenCapture(TestUtil.screenshotName));
-		}
+			CustomListeners.test.log(Status.FAIL, "Verifiation of Api Status Message:" + t.getMessage());
+				CustomListeners.test.fail("Please check the below Screenshot :",
+						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+
+			}
 
 	}
-
+	
 	@AfterSuite
 	public void teardown() {
 		if (driver != null) {
 			driver.quit();
+			
 		}
 		log.debug("Execution Completed");
 

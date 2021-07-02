@@ -1,58 +1,58 @@
 package com.simplogics.listeners;
 
+import java.io.File;
 import java.io.IOException;
-
+import java.util.Date;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.simplogics.base.TestBase;
+import com.simplogics.utilities.Email;
+import com.simplogics.utilities.ExtentManager;
 import com.simplogics.utilities.TestUtil;
 
-public class CustomListeners extends TestBase implements ITestListener {
-
+public class CustomListeners extends TestBase implements ITestListener, ISuiteListener {
+	static String fileName = "Extent.html";
+	public static ExtentReports extent = ExtentManager.createInstance(System.getProperty("user.dir")+"/target/surefire-reports/html/"+fileName);
+	static String messageBody;
+	public static  ExtentTest test;
+	static Date d = new Date();
 	public void onTestStart(ITestResult result) {
-		test = rep.startTest(result.getName().toUpperCase());
-
+		//test = rep.startTest(result.getName().toUpperCase());
+		 test = extent.createTest(result.getName().toUpperCase());
+		
 	}
 
 	public void onTestSuccess(ITestResult result) {
 
-		test.log(LogStatus.PASS, result.getName().toUpperCase() + " PASS");
-		rep.endTest(test);
-		rep.flush();
-
+		test.log(Status.PASS, "Testcase success : " + result.getName().toUpperCase());
+		
 	}
 
 	public void onTestFailure(ITestResult result) {
 
-		System.setProperty("org.uncommons.reportng.escape-output", "false");
-		try {
-			TestUtil.captureScreenshot();
-		} catch (IOException e) {
+		test.log(Status.FAIL, "Testcase failed : " + result.getName().toUpperCase());
 
+		test.log(Status.FAIL, "Failure Response: " + result.getThrowable());
+		try {
+			test.fail("Please check the below Screenshot :",
+					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		test.log(LogStatus.FAIL, result.getName().toUpperCase() + " Failed with exception : " + result.getThrowable());
-		test.log(LogStatus.FAIL, test.addScreenCapture(TestUtil.screenshotName));
-		Reporter.log("Click to see Screenshot");
-		Reporter.log("<a target=\"_blank\" href=" + TestUtil.screenshotName + ">Screenshot</a>");
-		Reporter.log("<br>");
-		Reporter.log("<br>");
-		Reporter.log("<a target=\"_blank\" href=" + TestUtil.screenshotName + "><img src=" + TestUtil.screenshotName
-				+ " height=200 width=200></img></a>");
-		rep.endTest(test);
-		rep.flush();
 
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test.log(LogStatus.SKIP, result.getName().toUpperCase() + " Skipped the test as the Runmode is NO");
-		rep.endTest(test);
-		rep.flush();
-
+		test.log(Status.SKIP, "Testcase skipped :" + result.getName().toUpperCase());
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -66,8 +66,25 @@ public class CustomListeners extends TestBase implements ITestListener {
 	}
 
 	public void onFinish(ITestContext context) {
+		if (extent != null) {
+
+			extent.flush();
+		}
+
+	}
+
+	public void onStart(ISuite suite) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void onFinish(ISuite suite) {
+		
+		Email emil=new Email();
+		emil.email();
+		 File f= new
+				 File("/home/appus/Desktop/SMTP/UdemyFramework/target/surefire-reports/html/Extent.html");
+				 f.delete();
 	}
 
 }
