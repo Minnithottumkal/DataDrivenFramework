@@ -1,6 +1,5 @@
 package com.simplogics.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,8 +20,7 @@ import com.simplogics.listeners.CustomListeners;
 import com.simplogics.utilities.ExcelReader;
 import com.simplogics.utilities.TestUtil;
 
-
-public class TestBase{
+public class TestBase {
 	public static WebDriver driver;
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
@@ -32,7 +30,6 @@ public class TestBase{
 	public static ExcelReader excel = new ExcelReader(
 			System.getProperty("user.dir") + "/src/test/Files/excel/testdata.xlsx");
 	public static String browser;
-
 
 	@BeforeSuite
 	public void setup() {
@@ -67,18 +64,17 @@ public class TestBase{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
-				browser= System.getenv("browser");
-				
-			}else {
-				
-				browser=config.getProperty("browser");
+
+			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+				browser = System.getenv("browser");
+
+			} else {
+
+				browser = config.getProperty("browser");
 			}
-				
-			
+
 			config.setProperty("browser", browser);
-			
+
 			if (config.getProperty("browser").equals("firefox")) {
 
 				System.setProperty("webdriver.gecko.driver",
@@ -90,6 +86,9 @@ public class TestBase{
 
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/src/test/Files/executables/chromedriver");
+				System.setProperty("webdriver.chrome.logfile",
+						"./TestResult_Log.log");
+				System.setProperty("webdriver.chrome.verboseLogging", "true");
 				driver = new ChromeDriver();
 				log.debug("Chrome Launched !!!");
 			} else if (config.getProperty("browser").equals("ie")) {
@@ -137,18 +136,18 @@ public class TestBase{
 			Assert.assertEquals(actual, expected);
 		} catch (Throwable t) {
 			CustomListeners.test.log(Status.FAIL, "Verifiation of Api Status Message:" + t.getMessage());
-				CustomListeners.test.fail("Please check the below Screenshot :",
-						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+			CustomListeners.test.fail("Please check the below Screenshot :",
+					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
 
-			}
+		}
 
 	}
-	
+
 	@AfterSuite
 	public void teardown() {
 		if (driver != null) {
 			driver.quit();
-			
+
 		}
 		log.debug("Execution Completed");
 
