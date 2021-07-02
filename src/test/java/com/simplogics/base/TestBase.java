@@ -7,8 +7,10 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
@@ -89,7 +91,12 @@ public class TestBase {
 				System.setProperty("webdriver.chrome.logfile",
 						"./TestResult_Log.log");
 				System.setProperty("webdriver.chrome.verboseLogging", "true");
-				driver = new ChromeDriver();
+				//driver = new ChromeDriver();
+				//driver.manage().window().setSize(new Dimension(1600, 700));
+				ChromeOptions options = new ChromeOptions();
+	                options.addArguments("--headless");
+	                options.addArguments("--window-size=1600,700");
+	                driver = new ChromeDriver(options);
 				log.debug("Chrome Launched !!!");
 			} else if (config.getProperty("browser").equals("ie")) {
 
