@@ -1,5 +1,7 @@
 package com.simplogics.base;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -82,21 +85,23 @@ public class TestBase {
 				System.setProperty("webdriver.gecko.driver",
 						System.getProperty("user.dir") + "/src/test/Files/executables/geckodriver");
 				driver = new FirefoxDriver();
-				log.debug("Firefox Launched !!!");
+				FirefoxOptions firefoxOptions = new FirefoxOptions();
+				firefoxOptions.addArguments("--headless");
+				firefoxOptions.addArguments("--window-size=1600,700");
+				driver = new FirefoxDriver(firefoxOptions);
 
 			} else if (config.getProperty("browser").equals("chrome")) {
 
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/src/test/Files/executables/chromedriver");
-				System.setProperty("webdriver.chrome.logfile",
-						"./TestResult_Log.log");
+				System.setProperty("webdriver.chrome.logfile", "./TestResult.log");
 				System.setProperty("webdriver.chrome.verboseLogging", "true");
-				//driver = new ChromeDriver();
-				//driver.manage().window().setSize(new Dimension(1600, 700));
-				ChromeOptions options = new ChromeOptions();
-	                options.addArguments("--headless");
-	                options.addArguments("--window-size=1600,700");
-	                driver = new ChromeDriver(options);
+				driver = new ChromeDriver();
+				driver.manage().window().setSize(new Dimension(1600, 700));
+				// ChromeOptions options = new ChromeOptions();
+				// options.addArguments("--headless");
+				// options.addArguments("--window-size=1600,700");
+				// driver = new ChromeDriver(options);
 				log.debug("Chrome Launched !!!");
 			} else if (config.getProperty("browser").equals("ie")) {
 
@@ -146,6 +151,23 @@ public class TestBase {
 			CustomListeners.test.fail("Please check the below Screenshot :",
 					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
 
+		}
+
+	}
+
+	public static void Asserttoast(String expectedtoast, String locator) {
+		if (locator.endsWith("_CSS")) {
+			String appearedtoast = driver.findElement(By.cssSelector(OR.getProperty(locator))).getText();
+			assertEquals(appearedtoast, expectedtoast);
+		} else if (locator.endsWith("_XPATH")) {
+			String appearedtoast = driver.findElement(By.xpath(OR.getProperty(locator))).getText();
+			assertEquals(appearedtoast, expectedtoast);
+		} else if (locator.endsWith("_ID")) {
+			String appearedtoast = driver.findElement(By.id(OR.getProperty(locator))).getText();
+			assertEquals(appearedtoast, expectedtoast);
+		} else if (locator.endsWith("_linkText")) {
+			String appearedtoast = driver.findElement(By.linkText(OR.getProperty(locator))).getText();
+			assertEquals(appearedtoast, expectedtoast);
 		}
 
 	}

@@ -6,15 +6,15 @@
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="com.simplogics.listeners.CustomListeners"/>
   </listeners>
-  <test thread-count="5" name="LoginTest(failed)" verbose="0">
+  <test thread-count="5" name="CreateCompany(failed)" verbose="0">
     <classes>
-      <class name="com.simplogics.testcases.LoginTest">
+      <class name="com.simplogics.testcases.CreateCompany">
         <methods>
           <include name="teardown"/>
-          <include name="loginTest" invocation-numbers="0"/>
+          <include name="createCompany" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.simplogics.testcases.LoginTest -->
+      </class> <!-- com.simplogics.testcases.CreateCompany -->
     </classes>
-  </test> <!-- LoginTest(failed) -->
+  </test> <!-- CreateCompany(failed) -->
 </suite> <!-- Failed suite [Data Driven Basics] -->

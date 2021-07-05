@@ -17,6 +17,16 @@
 			<class name="com.simplogics.testcases.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
+		<test name="Companymenu">
+		<classes>
+			<class name="com.simplogics.testcases.Companymenu" />
+		</classes>
+	</test> <!-- Test -->
+		<test name="CreateCompany">
+		<classes>
+			<class name="com.simplogics.testcases.CreateCompany" />
+		</classes>
+	</test> <!-- Test -->
 
 
 </suite> <!-- Suite -->

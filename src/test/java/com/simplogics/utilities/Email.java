@@ -30,7 +30,7 @@ public void email() {
 	    final String to ="minni.thottumkal@simplogics.com"; //change to to email address
 	   // final String cc = "test.cc.email@helloselenium.com"; //change to cc email address
 	    //final String bcc = "test.bcc.email@helloselenium.com"; //change to bcc email address
-	    final String subject = "Test Report and Logs of API Automation"; //change to your subject
+	    final String subject = "Test Report and Logs of Automation"; //change to your subject
 	     String msg = "please find the attached document after automation"; //change to your message
 
 	    Properties props = new Properties();

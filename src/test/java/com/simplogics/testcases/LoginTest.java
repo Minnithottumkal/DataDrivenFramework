@@ -9,7 +9,7 @@ import com.simplogics.base.TestBase;
 import com.simplogics.utilities.TestUtil;
 
 public class LoginTest extends TestBase {
-	@Test(dataProviderClass = TestUtil.class, dataProvider = "dp")
+	@Test(dataProviderClass = TestUtil.class, dataProvider = "dp",priority=1)
 	public void loginTest(Hashtable<String, String> data) throws InterruptedException, IOException {
 		if (!(TestUtil.isTestRunnable("LoginTest", excel))) {
 
@@ -27,7 +27,7 @@ public class LoginTest extends TestBase {
 		log.debug("Login Successfull!!!");
 		Thread.sleep(3000);
 		// forcefully failing a test
-		verifyEquals("Invalid login", "valid login");
+		//verifyEquals("Invalid login", "valid login");
 		// Assert.fail("Invalid login");
 
 	}

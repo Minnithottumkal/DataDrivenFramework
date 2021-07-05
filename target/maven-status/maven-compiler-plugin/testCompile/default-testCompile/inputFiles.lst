@@ -1,7 +1,11 @@
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/TestUtil.java
+/home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/TestConfig.java
+/home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/testcases/Companymenu.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/listeners/CustomListeners.java
+/home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/MonitoringMail.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/base/TestBase.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/testcases/LoginTest.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/ExtentManager.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/Email.java
+/home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/testcases/CreateCompany.java
 /home/appus/Desktop/SMTP/UdemyFramework/src/test/java/com/simplogics/utilities/ExcelReader.java
