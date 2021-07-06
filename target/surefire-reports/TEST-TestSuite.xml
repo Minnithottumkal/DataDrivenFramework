@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="13.323" tests="3" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="13.716" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="XDG_SESSION_CLASS" value="user"/>
     <property name="DISPLAY" value=":0"/>
@@ -10,7 +10,7 @@
     <property name="PWD" value="/home/appus/Desktop/SMTP"/>
     <property name="JENKINS_URL" value="http://localhost:8080/"/>
     <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
-    <property name="KONSOLE_DBUS_SERVICE" value=":1.337"/>
+    <property name="KONSOLE_DBUS_SERVICE" value=":1.615"/>
     <property name="XDG_SEAT_PATH" value="/org/freedesktop/DisplayManager/Seat0"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -31,22 +31,22 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="XDG_SESSION_DESKTOP" value="KDE"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/37/display/redirect?page=changes"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/41/display/redirect?page=changes"/>
     <property name="user.timezone" value="Asia/Kolkata"/>
     <property name="path.separator" value=":"/>
     <property name="WINDOWID" value="83886087"/>
-    <property name="BUILD_TAG" value="jenkins-MavenProject-37"/>
+    <property name="BUILD_TAG" value="jenkins-MavenProject-41"/>
     <property name="TERM" value="xterm-256color"/>
     <property name="MANDATORY_PATH" value="/usr/share/gconf//usr/share/xsessions/plasma.mandatory.path"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="PATH" value="/usr/lib/jvm/java-11-openjdk-amd64//bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
     <property name="QT_ACCESSIBILITY" value="1"/>
     <property name="DESKTOP_SESSION" value="/usr/share/xsessions/plasma"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main /home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME /home/appus/.jenkins/war/WEB-INF/lib/remoting-4.7.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 46547"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main /home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME /home/appus/.jenkins/war/WEB-INF/lib/remoting-4.7.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 41941"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="XDG_CONFIG_DIRS" value="/etc/xdg/xdg-/usr/share/xsessions/plasma:/etc/xdg"/>
     <property name="JENKINS_SERVER_COOKIE" value="cba506d69e3c8a59"/>
-    <property name="EXECUTOR_NUMBER" value="1"/>
+    <property name="EXECUTOR_NUMBER" value="0"/>
     <property name="XDG_SESSION_TYPE" value="x11"/>
     <property name="XDG_SESSION_PATH" value="/org/freedesktop/DisplayManager/Session1"/>
     <property name="java.io.tmpdir" value="/tmp"/>
@@ -55,7 +55,7 @@
     <property name="user.language" value="en"/>
     <property name="line.separator" value="&#10;"/>
     <property name="COLORTERM" value="truecolor"/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/MavenProject/37/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/MavenProject/41/"/>
     <property name="SSH_AGENT_PID" value="1074"/>
     <property name="SHLVL" value="1"/>
     <property name="KONSOLE_DBUS_WINDOW" value="/Windows/1"/>
@@ -64,7 +64,7 @@
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="CI" value="true"/>
-    <property name="BUILD_DISPLAY_NAME" value="#37"/>
+    <property name="BUILD_DISPLAY_NAME" value="#41"/>
     <property name="QT_SCREEN_SCALE_FACTORS" value="VGA-0=1;LVDS=1;HDMI-0=1;"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="HUDSON_SERVER_COOKIE" value="cba506d69e3c8a59"/>
@@ -82,7 +82,7 @@
     <property name="XDG_CURRENT_DESKTOP" value="KDE"/>
     <property name="os.name" value="Linux"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="BUILD_NUMBER" value="37"/>
+    <property name="BUILD_NUMBER" value="41"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="PROFILEHOME" value=""/>
     <property name="maven3.interceptor" value="/home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar"/>
@@ -96,9 +96,9 @@
     <property name="KONSOLE_VERSION" value="200403"/>
     <property name="browser" value="chrome"/>
     <property name="COLORFGBG" value="15;0"/>
-    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/37/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/41/display/redirect"/>
     <property name="JENKINS_HOME" value="/home/appus/.jenkins"/>
-    <property name="BUILD_ID" value="37"/>
+    <property name="BUILD_ID" value="41"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
@@ -106,7 +106,7 @@
     <property name="HUDSON_HOME" value="/home/appus/.jenkins"/>
     <property name="PATH+MAVEN" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/bin"/>
     <property name="OLDPWD" value="/home/appus/Desktop"/>
-    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/37/display/redirect?page=artifacts"/>
+    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/41/display/redirect?page=artifacts"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="JAVA_HOME" value="/usr/lib/jvm/java-11-openjdk-amd64/"/>
     <property name="SHELL" value="/bin/bash"/>
@@ -125,14 +125,14 @@
     <property name="XDG_VTNR" value="1"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="MOZ_USE_XINPUT2" value="1"/>
-    <property name="SHELL_SESSION_ID" value="87627c66456943a786511021418a6c45"/>
+    <property name="SHELL_SESSION_ID" value="4661bd7081264eeea743bb65017cc395"/>
     <property name="java.vm.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/>
     <property name="XDG_SEAT" value="seat0"/>
     <property name="java.class.path" value="/home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/boot/plexus-classworlds-2.5.2.jar:/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/conf/logging"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
     <property name="os.arch" value="amd64"/>
     <property name="WORKSPACE" value="/home/appus/.jenkins/workspace/MavenProject"/>
-    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/37/display/redirect?page=tests"/>
+    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/41/display/redirect?page=tests"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="LANG" value="en_IN"/>
     <property name="GTK2_RC_FILES" value="/etc/gtk-2.0/gtkrc:/home/appus/.gtkrc-2.0:/home/appus/.config/gtkrc-2.0"/>
@@ -156,18 +156,7 @@
     <property name="POM_DISPLAYNAME" value="UdemyFramework"/>
     <property name="sun.arch.data.model" value="64"/>
   </properties>
-  <testcase name="loginTest" classname="com.simplogics.testcases.LoginTest" time="6.557"/>
-  <testcase name="companymenu" classname="com.simplogics.testcases.Companymenu" time="0.781"/>
-  <testcase name="createCompany" classname="com.simplogics.testcases.CreateCompany" time="5.985">
-    <failure message="expected [Company created successfully] but found [Duplicate company name]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Company created successfully] but found [Duplicate company name]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.simplogics.base.TestBase.Asserttoast(TestBase.java:161)
-	at com.simplogics.testcases.CreateCompany.createCompany(CreateCompany.java:31)
-</failure>
-  </testcase>
+  <testcase name="loginTest" classname="com.simplogics.testcases.LoginTest" time="7.217"/>
+  <testcase name="companymenu" classname="com.simplogics.testcases.Companymenu" time="0.679"/>
+  <testcase name="createCompany" classname="com.simplogics.testcases.CreateCompany" time="5.82"/>
 </testsuite>

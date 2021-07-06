@@ -10,7 +10,7 @@ public class ExtentManager {
 		htmlReporter = new ExtentHtmlReporter(fileName);
 		htmlReporter.setAppendExisting(true);// works only for aventstack 3.1.5 dependency and relevantcodes 2.41.2
 		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setDocumentTitle("Automation Reports");
+		htmlReporter.config().setDocumentTitle("Selenium Automation Report");
 		htmlReporter.config().setReportName("Automation Test Results");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 

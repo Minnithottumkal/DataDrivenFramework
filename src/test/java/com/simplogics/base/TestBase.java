@@ -1,12 +1,9 @@
 package com.simplogics.base;
-
 import static org.testng.Assert.assertEquals;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -39,8 +36,7 @@ public class TestBase {
 	@BeforeSuite
 	public void setup() {
 		if (driver == null) {
-			// String log4jConfPath = "src/test/resources/log4j.properties";
-			// PropertyConfigurator.configure(log4jConfPath);
+
 			try {
 				fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/Config.properties");
 			} catch (FileNotFoundException e) {
@@ -147,7 +143,7 @@ public class TestBase {
 		try {
 			Assert.assertEquals(actual, expected);
 		} catch (Throwable t) {
-			CustomListeners.test.log(Status.FAIL, "Verifiation of Api Status Message:" + t.getMessage());
+			CustomListeners.test.log(Status.FAIL, "Verifiation Failed:" + t.getMessage());
 			CustomListeners.test.fail("Please check the below Screenshot :",
 					MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
 
@@ -155,19 +151,50 @@ public class TestBase {
 
 	}
 
-	public static void Asserttoast(String expectedtoast, String locator) {
+	public static void Asserttoast(String expectedtoast, String locator) throws IOException {
 		if (locator.endsWith("_CSS")) {
 			String appearedtoast = driver.findElement(By.cssSelector(OR.getProperty(locator))).getText();
-			assertEquals(appearedtoast, expectedtoast);
+			try {
+				assertEquals(appearedtoast, expectedtoast);
+			} catch (Throwable t) {
+				CustomListeners.test.log(Status.FAIL, "Verifiation Failed::" + t.getMessage());
+				CustomListeners.test.fail("Please check the below Screenshot :",
+						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+
+			}
 		} else if (locator.endsWith("_XPATH")) {
 			String appearedtoast = driver.findElement(By.xpath(OR.getProperty(locator))).getText();
-			assertEquals(appearedtoast, expectedtoast);
+			try {
+				assertEquals(appearedtoast, expectedtoast);
+			} catch (Throwable t) {
+				CustomListeners.test.log(Status.FAIL, "Verifiation Failed::" + t.getMessage());
+				CustomListeners.test.fail("Please check the below Screenshot :",
+						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+
+			}
+
 		} else if (locator.endsWith("_ID")) {
 			String appearedtoast = driver.findElement(By.id(OR.getProperty(locator))).getText();
-			assertEquals(appearedtoast, expectedtoast);
+			try {
+				assertEquals(appearedtoast, expectedtoast);
+			} catch (Throwable t) {
+				CustomListeners.test.log(Status.FAIL, "Verifiation Failed:" + t.getMessage());
+				CustomListeners.test.fail("Please check the below Screenshot :",
+						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+
+			}
+
 		} else if (locator.endsWith("_linkText")) {
 			String appearedtoast = driver.findElement(By.linkText(OR.getProperty(locator))).getText();
-			assertEquals(appearedtoast, expectedtoast);
+			try {
+				assertEquals(appearedtoast, expectedtoast);
+			} catch (Throwable t) {
+				CustomListeners.test.log(Status.FAIL, "Verifiation Failed:" + t.getMessage());
+				CustomListeners.test.fail("Please check the below Screenshot :",
+						MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtil.getbase64()).build());
+
+			}
+
 		}
 
 	}

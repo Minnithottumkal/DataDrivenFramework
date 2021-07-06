@@ -78,7 +78,7 @@ public void email() {
 	        message.setContent(multipart);
 	        
 	        String file2 = "/home/appus/Desktop/SMTP/UdemyFramework/src/test/Files/logs/Selenium.log";        		
-	        String fileName2= "TestResult "+date2+".log"; //change to your attachment filename
+	        String fileName2= "TestLog "+date2+".log"; //change to your attachment filename
 	        DataSource source2 = new FileDataSource(file2);
 	        BodyPart messageBodyPart2 = new MimeBodyPart();
 	        messageBodyPart2.setDataHandler(new DataHandler(source2));

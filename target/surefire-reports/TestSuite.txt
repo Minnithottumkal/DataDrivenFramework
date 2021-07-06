@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 97.075 sec <<< FAILURE! - in TestSuite
-createCompany(com.simplogics.testcases.CreateCompany)  Time elapsed: 5.985 sec  <<< FAILURE!
-java.lang.AssertionError: expected [Company created successfully] but found [Duplicate company name]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.simplogics.base.TestBase.Asserttoast(TestBase.java:161)
-	at com.simplogics.testcases.CreateCompany.createCompany(CreateCompany.java:31)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 157.915 sec - in TestSuite
