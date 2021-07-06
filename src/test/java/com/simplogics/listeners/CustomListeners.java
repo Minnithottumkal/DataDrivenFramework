@@ -109,9 +109,9 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		 File f= new
-				 File("/home/appus/Desktop/SMTP/UdemyFramework/target/surefire-reports/html/Extent.html");
-				f.delete();
+		// File f= new
+				 //File("/home/appus/Desktop/SMTP/UdemyFramework/target/surefire-reports/html/Extent.html");
+				//f.delete();
 	}
 
 }
