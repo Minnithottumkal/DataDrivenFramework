@@ -22,6 +22,8 @@ import com.simplogics.listeners.CustomListeners;
 import com.simplogics.utilities.ExcelReader;
 import com.simplogics.utilities.TestUtil;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties config = new Properties();
@@ -77,14 +79,18 @@ public class TestBase {
 			config.setProperty("browser", browser);
 
 			if (config.getProperty("browser").equals("firefox")) {
-
-				System.setProperty("webdriver.gecko.driver",
-						System.getProperty("user.dir") + "/src/test/Files/executables/geckodriver");
-				driver = new FirefoxDriver();
-				FirefoxOptions firefoxOptions = new FirefoxOptions();
-				firefoxOptions.addArguments("--headless");
-				firefoxOptions.addArguments("--window-size=1600,700");
-				driver = new FirefoxDriver(firefoxOptions);
+				//require older version of firefox 59 for geckodriver and headless
+				//System.setProperty("webdriver.gecko.driver",
+					//	System.getProperty("user.dir") + "/src/test/Files/executables/geckodriver");
+				//driver = new FirefoxDriver();
+				//Supports firefox latest version
+				WebDriverManager.firefoxdriver().setup();
+				 driver=new FirefoxDriver();
+				//headless browser setup
+				//FirefoxOptions firefoxOptions = new FirefoxOptions();
+				//firefoxOptions.addArguments("--headless");
+				//firefoxOptions.addArguments("--window-size=1600,700");
+			//	driver = new FirefoxDriver(firefoxOptions);
 
 			} else if (config.getProperty("browser").equals("chrome")) {
 
@@ -92,12 +98,12 @@ public class TestBase {
 						System.getProperty("user.dir") + "/src/test/Files/executables/chromedriver");
 				System.setProperty("webdriver.chrome.logfile", "./TestResult.log");
 				System.setProperty("webdriver.chrome.verboseLogging", "true");
-				driver = new ChromeDriver();
-				driver.manage().window().setSize(new Dimension(1600, 700));
-				// ChromeOptions options = new ChromeOptions();
-				// options.addArguments("--headless");
-				// options.addArguments("--window-size=1600,700");
-				// driver = new ChromeDriver(options);
+				//driver = new ChromeDriver();
+				//driver.manage().window().setSize(new Dimension(1600, 700));
+				 ChromeOptions options = new ChromeOptions();
+				 options.addArguments("--headless");
+				 options.addArguments("--window-size=1600,700");
+				 driver = new ChromeDriver(options);
 				log.debug("Chrome Launched !!!");
 			} else if (config.getProperty("browser").equals("ie")) {
 

@@ -1,13 +1,7 @@
 package com.simplogics.listeners;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Date;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -22,26 +16,26 @@ import com.aventstack.extentreports.Status;
 import com.simplogics.base.TestBase;
 import com.simplogics.utilities.Email;
 import com.simplogics.utilities.ExtentManager;
-import com.simplogics.utilities.MonitoringMail;
-import com.simplogics.utilities.TestConfig;
 import com.simplogics.utilities.TestUtil;
 
 public class CustomListeners extends TestBase implements ITestListener, ISuiteListener {
 	static String fileName = "Extent.html";
-	public static ExtentReports extent = ExtentManager.createInstance(System.getProperty("user.dir")+"/target/surefire-reports/html/"+fileName);
+	public static ExtentReports extent = ExtentManager
+			.createInstance(System.getProperty("user.dir") + "/target/surefire-reports/html/" + fileName);
 	static String messageBody;
-	public static  ExtentTest test;
+	public static ExtentTest test;
 	static Date d = new Date();
+
 	public void onTestStart(ITestResult result) {
-		//test = rep.startTest(result.getName().toUpperCase());
-		 test = extent.createTest(result.getName().toUpperCase());
-		
+		// test = rep.startTest(result.getName().toUpperCase());
+		test = extent.createTest(result.getName().toUpperCase());
+
 	}
 
 	public void onTestSuccess(ITestResult result) {
 
 		test.log(Status.PASS, "Testcase success : " + result.getName().toUpperCase());
-		
+
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -87,31 +81,24 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
 	}
 
 	public void onFinish(ISuite suite) {
-		
-		Email emil=new Email();
+
+		Email emil = new Email();
 		emil.email();
-		/*MonitoringMail mail = new MonitoringMail();
-		 
-		try {
-			messageBody = "http://" + InetAddress.getLocalHost().getHostAddress()
-					+ ":8080/job/MavenProject/Test_20Result/";
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-		try {
-			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+		/*
+		 * MonitoringMail mail = new MonitoringMail();
+		 * 
+		 * try { messageBody = "http://" + InetAddress.getLocalHost().getHostAddress() +
+		 * ":8080/job/MavenProject/Test_20Result/"; } catch (UnknownHostException e) {
+		 * // TODO Auto-generated catch block e.printStackTrace(); }
+		 * 
+		 * try { mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to,
+		 * TestConfig.subject, messageBody); } catch (AddressException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); } catch (MessagingException
+		 * e) { // TODO Auto-generated catch block e.printStackTrace(); }
+		 */
 		// File f= new
-				 //File("/home/appus/Desktop/SMTP/UdemyFramework/target/surefire-reports/html/Extent.html");
-				//f.delete();
+		// File("/home/appus/Desktop/SMTP/UdemyFramework/target/surefire-reports/html/Extent.html");
+		// f.delete();
 	}
 
 }

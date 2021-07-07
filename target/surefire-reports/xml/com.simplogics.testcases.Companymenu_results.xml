@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.823">
+           time="0.507">
   <properties />
   
   
-            <testcase name="companymenu" time="0.823" classname="com.simplogics.testcases.Companymenu" />
+            <testcase name="companymenu" time="0.507" classname="com.simplogics.testcases.Companymenu" />
       
 </testsuite>

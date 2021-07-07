@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-06T12:15:12Z" name="Data Driven Basics" finished-at="2021-07-06T12:15:26Z" duration-ms="14048">
+  <suite started-at="2021-07-07T08:27:33Z" name="Data Driven Basics" finished-at="2021-07-07T08:27:52Z" duration-ms="18821">
     <groups>
     </groups>
-    <test started-at="2021-07-06T12:15:12Z" name="LoginTest" finished-at="2021-07-06T12:15:18Z" duration-ms="6237">
+    <test started-at="2021-07-07T08:27:33Z" name="LoginTest" finished-at="2021-07-07T08:27:40Z" duration-ms="6700">
       <class name="com.simplogics.testcases.LoginTest">
-        <test-method signature="loginTest(java.util.Hashtable)[pri:1, instance:com.simplogics.testcases.LoginTest@147a5d08]" started-at="2021-07-06T12:15:12Z" name="loginTest" data-provider="dp" finished-at="2021-07-06T12:15:18Z" duration-ms="6179" status="PASS">
+        <test-method signature="loginTest(java.util.Hashtable)[pri:1, instance:com.simplogics.testcases.LoginTest@147a5d08]" started-at="2021-07-07T08:27:33Z" name="loginTest" data-provider="dp" finished-at="2021-07-07T08:27:40Z" duration-ms="6380" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,21 +20,21 @@
         </test-method> <!-- loginTest -->
       </class> <!-- com.simplogics.testcases.LoginTest -->
     </test> <!-- LoginTest -->
-    <test started-at="2021-07-06T12:15:19Z" name="Companymenu" finished-at="2021-07-06T12:15:20Z" duration-ms="830">
+    <test started-at="2021-07-07T08:27:45Z" name="Companymenu" finished-at="2021-07-07T08:27:45Z" duration-ms="510">
       <class name="com.simplogics.testcases.Companymenu">
-        <test-method signature="companymenu()[pri:2, instance:com.simplogics.testcases.Companymenu@4f6f416f]" started-at="2021-07-06T12:15:19Z" name="companymenu" finished-at="2021-07-06T12:15:20Z" duration-ms="823" status="PASS">
+        <test-method signature="companymenu()[pri:2, instance:com.simplogics.testcases.Companymenu@4f6f416f]" started-at="2021-07-07T08:27:45Z" name="companymenu" finished-at="2021-07-07T08:27:45Z" duration-ms="507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- companymenu -->
       </class> <!-- com.simplogics.testcases.Companymenu -->
     </test> <!-- Companymenu -->
-    <test started-at="2021-07-06T12:15:20Z" name="CreateCompany" finished-at="2021-07-06T12:15:26Z" duration-ms="5515">
+    <test started-at="2021-07-07T08:27:45Z" name="CreateCompany" finished-at="2021-07-07T08:27:52Z" duration-ms="6541">
       <class name="com.simplogics.testcases.CreateCompany">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-06T12:15:01Z" name="setup" finished-at="2021-07-06T12:15:12Z" duration-ms="10893" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-07T08:26:21Z" name="setup" finished-at="2021-07-07T08:27:33Z" duration-ms="72051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createCompany(java.util.Hashtable)[pri:3, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-06T12:15:20Z" name="createCompany" data-provider="dp" finished-at="2021-07-06T12:15:26Z" duration-ms="5508" status="PASS">
+        <test-method signature="createCompany(java.util.Hashtable)[pri:3, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-07T08:27:45Z" name="createCompany" data-provider="dp" finished-at="2021-07-07T08:27:52Z" duration-ms="6534" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCompany -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-06T12:15:26Z" name="teardown" finished-at="2021-07-06T12:15:26Z" duration-ms="305" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.simplogics.testcases.CreateCompany@44c73c26]" started-at="2021-07-07T08:27:52Z" name="teardown" finished-at="2021-07-07T08:27:59Z" duration-ms="6849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

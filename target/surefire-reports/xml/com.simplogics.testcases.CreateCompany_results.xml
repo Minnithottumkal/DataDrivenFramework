@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.508">
+           time="6.534">
   <properties />
   
   
-            <testcase name="createCompany" time="5.508" classname="com.simplogics.testcases.CreateCompany" />
+            <testcase name="createCompany" time="6.534" classname="com.simplogics.testcases.CreateCompany" />
       
 </testsuite>

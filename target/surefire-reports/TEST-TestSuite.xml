@@ -1,63 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="12.487" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="13.351" tests="3" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/appus/Desktop/SMTP/UdemyFramework"/>
-    <property name="java.vm.vendor" value="Ubuntu"/>
-    <property name="java.vendor.url" value="https://ubuntu.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="XDG_SESSION_CLASS" value="user"/>
+    <property name="DISPLAY" value=":0"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="LOGNAME" value="appus"/>
+    <property name="QT_AUTO_SCREEN_SCALE_FACTOR" value="0"/>
+    <property name="NODE_NAME" value="master"/>
+    <property name="PWD" value="/home/appus/Desktop/SMTP"/>
+    <property name="JENKINS_URL" value="http://localhost:8080/"/>
+    <property name="sun.font.fontmanager" value="sun.awt.X11FontManager"/>
+    <property name="KONSOLE_DBUS_SERVICE" value=":1.243"/>
+    <property name="XDG_SEAT_PATH" value="/org/freedesktop/DisplayManager/Seat0"/>
     <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.country" value="IN"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/appus/Desktop/SMTP/UdemyFramework"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/appus/Desktop/SMTP/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf79061539953950867.tmp"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="GPG_AGENT_INFO" value="/run/user/1000/gnupg/S.gpg-agent:0:1"/>
+    <property name="java.version" value="11.0.9.1"/>
+    <property name="JOB_NAME" value="MavenProject"/>
+    <property name="PAM_KWALLET5_LOGIN" value="/run/user/1000/kwallet5.socket"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="XDG_DATA_DIRS" value="/usr/share//usr/share/xsessions/plasma:/home/appus/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"/>
+    <property name="KONSOLE_DBUS_SESSION" value="/Sessions/1"/>
+    <property name="java.version.date" value="2020-11-04"/>
     <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="55.0"/>
+    <property name="XCURSOR_SIZE" value="24"/>
+    <property name="user.name" value="appus"/>
+    <property name="XDG_RUNTIME_DIR" value="/run/user/1000"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="XDG_SESSION_DESKTOP" value="KDE"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/45/display/redirect?page=changes"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="path.separator" value=":"/>
+    <property name="WINDOWID" value="79691783"/>
+    <property name="BUILD_TAG" value="jenkins-MavenProject-45"/>
+    <property name="TERM" value="xterm-256color"/>
+    <property name="MANDATORY_PATH" value="/usr/share/gconf//usr/share/xsessions/plasma.mandatory.path"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="PATH" value="/usr/lib/jvm/java-11-openjdk-amd64//bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
+    <property name="QT_ACCESSIBILITY" value="1"/>
+    <property name="DESKTOP_SESSION" value="/usr/share/xsessions/plasma"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main /home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME /home/appus/.jenkins/war/WEB-INF/lib/remoting-4.7.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar /home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar 42279"/>
+    <property name="HUDSON_URL" value="http://localhost:8080/"/>
+    <property name="XDG_CONFIG_DIRS" value="/etc/xdg/xdg-/usr/share/xsessions/plasma:/etc/xdg"/>
+    <property name="JENKINS_SERVER_COOKIE" value="cba506d69e3c8a59"/>
+    <property name="EXECUTOR_NUMBER" value="1"/>
+    <property name="XDG_SESSION_TYPE" value="x11"/>
+    <property name="XDG_SESSION_PATH" value="/org/freedesktop/DisplayManager/Session1"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="GTK_RC_FILES" value="/etc/gtk/gtkrc:/home/appus/.gtkrc:/home/appus/.config/gtkrc"/>
+    <property name="KDE_SESSION_VERSION" value="5"/>
+    <property name="user.language" value="en"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="COLORTERM" value="truecolor"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/MavenProject/45/"/>
+    <property name="SSH_AGENT_PID" value="1064"/>
+    <property name="SHLVL" value="1"/>
+    <property name="KONSOLE_DBUS_WINDOW" value="/Windows/1"/>
+    <property name="M2_HOME" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME"/>
+    <property name="USER" value="appus"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="CI" value="true"/>
+    <property name="BUILD_DISPLAY_NAME" value="#45"/>
+    <property name="QT_SCREEN_SCALE_FACTORS" value="VGA-0=1;LVDS=1;HDMI-0=1;"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="HUDSON_SERVER_COOKIE" value="cba506d69e3c8a59"/>
+    <property name="WORKSPACE_TMP" value="/home/appus/.jenkins/workspace/MavenProject@tmp"/>
+    <property name="MAVEN_HOME" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME"/>
+    <property name="KDE_SESSION_UID" value="1000"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="SESSION_MANAGER" value="local/appus-HP-Pavilion-g6-Notebook-PC:@/tmp/.ICE-unix/1264,unix/appus-HP-Pavilion-g6-Notebook-PC:/tmp/.ICE-unix/1264"/>
+    <property name="DEFAULTS_PATH" value="/usr/share/gconf//usr/share/xsessions/plasma.default.path"/>
+    <property name="CLASSPATH" value=""/>
+    <property name="maven3.interceptor.common" value="/home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.13.jar"/>
+    <property name="XAUTHORITY" value="/home/appus/.Xauthority"/>
+    <property name="KDE_FULL_SESSION" value="true"/>
+    <property name="LESSCLOSE" value="/usr/bin/lesspipe %s %s"/>
+    <property name="XDG_CURRENT_DESKTOP" value="KDE"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="BUILD_NUMBER" value="45"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="PROFILEHOME" value=""/>
+    <property name="maven3.interceptor" value="/home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-interceptor-1.13.jar"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="POM_GROUPID" value="com.simplogics"/>
+    <property name="POM_ARTIFACTID" value="UdemyFramework"/>
+    <property name="KDE_APPLICATIONS_AS_SCOPE" value="1"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="DBUS_SESSION_BUS_ADDRESS" value="unix:abstract=/tmp/dbus-5qjPOmX9od,guid=e4190df56f8161188bebbb4660e52e4d"/>
+    <property name="JOB_URL" value="http://localhost:8080/job/MavenProject/"/>
+    <property name="KONSOLE_VERSION" value="200403"/>
+    <property name="browser" value="firefox"/>
+    <property name="COLORFGBG" value="15;0"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/45/display/redirect"/>
+    <property name="JENKINS_HOME" value="/home/appus/.jenkins"/>
+    <property name="BUILD_ID" value="45"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
+    <property name="HUDSON_HOME" value="/home/appus/.jenkins"/>
+    <property name="PATH+MAVEN" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/bin"/>
+    <property name="OLDPWD" value="/home/appus/Desktop"/>
+    <property name="RUN_ARTIFACTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/45/display/redirect?page=artifacts"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="JAVA_HOME" value="/usr/lib/jvm/java-11-openjdk-amd64/"/>
+    <property name="SHELL" value="/bin/bash"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="NODE_LABELS" value="master"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="JOB_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/display/redirect"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="os.version" value="5.4.0-48-generic"/>
     <property name="user.home" value="/home/appus"/>
-    <property name="user.timezone" value="Asia/Kolkata"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="11"/>
-    <property name="user.name" value="appus"/>
-    <property name="java.class.path" value="/snap/eclipse/48/plugins/org.eclipse.m2e.maven.runtime_1.14.0.20191209-1923/jars/plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="11"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
-    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
-    <property name="user.language" value="en"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="11.0.9.1"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="java.vendor" value="Ubuntu"/>
-    <property name="maven.home" value="/home/appus/Desktop/SMTP/UdemyFramework/EMBEDDED"/>
-    <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2020-11-04"/>
-    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="_" value="/usr/bin/java"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="user.dir" value="/home/appus/Desktop/SMTP/UdemyFramework"/>
+    <property name="maven.conf" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/conf"/>
+    <property name="XDG_VTNR" value="1"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="MOZ_USE_XINPUT2" value="1"/>
+    <property name="SHELL_SESSION_ID" value="71ac8280cd0840b7a50637f1519fc84a"/>
+    <property name="java.vm.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/>
+    <property name="XDG_SEAT" value="seat0"/>
+    <property name="java.class.path" value="/home/appus/.jenkins/plugins/maven-plugin/WEB-INF/lib/maven35-agent-1.13.jar:/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/boot/plexus-classworlds-2.5.2.jar:/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME/conf/logging"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="WORKSPACE" value="/home/appus/.jenkins/workspace/MavenProject"/>
+    <property name="RUN_TESTS_DISPLAY_URL" value="http://localhost:8080/job/MavenProject/45/display/redirect?page=tests"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="LANG" value="en_IN"/>
+    <property name="GTK2_RC_FILES" value="/etc/gtk-2.0/gtkrc:/home/appus/.gtkrc-2.0:/home/appus/.config/gtkrc-2.0"/>
+    <property name="LESSOPEN" value="| /usr/bin/lesspipe %s"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="file.separator" value="/"/>
+    <property name="LANGUAGE" value="en_IN:en"/>
+    <property name="java.runtime.version" value="11.0.9.1+1-Ubuntu-0ubuntu1.18.04"/>
+    <property name="XDG_SESSION_ID" value="3"/>
+    <property name="XCURSOR_THEME" value="McMojave-cursors"/>
+    <property name="PATH+JDK" value="/usr/lib/jvm/java-11-openjdk-amd64//bin"/>
+    <property name="user.country" value="IN"/>
+    <property name="POM_PACKAGING" value="jar"/>
+    <property name="maven.home" value="/home/appus/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_HOME"/>
+    <property name="JOB_BASE_NAME" value="MavenProject"/>
+    <property name="HOME" value="/home/appus"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="SSH_AUTH_SOCK" value="/tmp/ssh-JV38uavzwmjw/agent.960"/>
+    <property name="LS_COLORS" value="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="POM_DISPLAYNAME" value="UdemyFramework"/>
+    <property name="sun.arch.data.model" value="64"/>
   </properties>
-  <testcase name="loginTest" classname="com.simplogics.testcases.LoginTest" time="6.154"/>
-  <testcase name="companymenu" classname="com.simplogics.testcases.Companymenu" time="0.825"/>
-  <testcase name="createCompany" classname="com.simplogics.testcases.CreateCompany" time="5.508"/>
+  <testcase name="loginTest" classname="com.simplogics.testcases.LoginTest" time="6.313"/>
+  <testcase name="companymenu" classname="com.simplogics.testcases.Companymenu" time="0.503"/>
+  <testcase name="createCompany" classname="com.simplogics.testcases.CreateCompany" time="6.535"/>
 </testsuite>
